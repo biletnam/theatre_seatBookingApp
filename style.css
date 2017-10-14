@@ -1,0 +1,123 @@
+<style type="text/css">
+
+/*Divs*/
+
+#nav
+{
+	width:600px;
+	background-color:#323232;
+	height:100px;
+	font-family:'Abel', sans-serif;
+	font-size:24px;
+}
+
+#titleimg
+{
+	padding-bottom:25px;
+	padding-top:10px;
+}
+
+#content
+{
+	width:600px;
+	background-color:#7c5b43;
+	border-left:#8d2b15 1px solid;
+	border-right:#8d2b15 1px solid;
+	padding-left:25px;
+	padding-right:25px;
+	padding-bottom:25px;
+	padding-top:5px;
+	text-align:justify;
+}
+
+/*headers*/
+
+h1
+{
+	text-align:left;
+	font-size:32px;
+	border-bottom:1px solid #ffffff;
+	color:#422d1d;
+	font-family:'Abel', sans-serif;
+	text-transform:uppercase;
+	margin-left:25px;
+}
+
+/*body*/
+
+body
+{
+	color:#ffffff;
+	font-family:'Lato', sans-serif;
+	font-size:12px;
+	text-align:justify;
+}
+
+/*links*/
+a:link	
+{
+	color:#ffffff;
+}
+
+a:visited
+{
+	color:#ffffff;
+}
+
+a:active	
+{
+	color:#ffffff;
+}
+
+/*forms and fieldsets*/
+
+input, textarea {
+  border:10px solid #422d1d;
+  width:200px;
+  font-size:11px;
+  font-family:'Lato', sans-serif;
+  color: #ffffff;
+  background-color: #422d1d;
+  letter-spacing:0px;
+  }
+ 
+ input#subm /*the submit button*/
+ {
+	 text-transform:uppercase;
+	 font-style:bold;
+	 font-size:15px;
+	 font-family:'Abel', sans-serif;
+	 background-color:#ffffff;
+	 border-color:#ffffff;
+	 color:#7c5b43;
+ }
+ 
+ fieldset
+ {
+	 border:0px;
+ }
+ 
+ /*table*/
+ 
+ th{
+
+	 background-color:#422d1d;
+	 padding:15px;
+	 padding-left:20px;
+	 padding-right:20px;
+	 font-family:'Abel', sans-serif;
+	 font-size:14px;
+	 color:#ffffff;
+	 text-transform:uppercase;
+ }
+ 
+ td
+ {
+	 text-transform:uppercase;
+	 text-align:center;
+	 font-size:14px;
+	 font-family:'Abel', sans-serif;
+	 color:#ffffff;
+ }
+
+</style>

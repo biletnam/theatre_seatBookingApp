@@ -1,0 +1,53 @@
+/**********************************************/
+/********** Theatre relational schema *********/
+/**********************************************/
+
+Production (Title,BasicTicketPrice)
+Performance (PerfDate,PerfTime,Title)
+Zone (Name,PriceMultiplier)
+Seat (RowNumber,Zone)
+Booking (BookingId,Name,Email,PerfDate,PerfTime,RowNumber)
+
+
+/**************************************************/
+/********** Theatre SQL table definitions *********/
+/**************************************************/
+
+CREATE TABLE Zone(
+ Name char(12) not null,
+ PriceMultiplier float not null default 1.0, 
+ PRIMARY KEY (Name)
+); 
+
+CREATE TABLE Seat(
+ RowNumber char(6) not null,
+ Zone char(12) not null,
+ PRIMARY KEY (RowNumber),
+ FOREIGN KEY (Zone) REFERENCES Zone(Name)
+);
+
+CREATE TABLE Production(
+ Title varchar(100) not null,
+ BasicTicketPrice numeric(5,2) not null,
+ PRIMARY KEY (Title)
+);
+
+CREATE TABLE Performance(
+ PerfDate date not null,
+ PerfTime time not null,
+ Title varchar(100) not null,
+ PRIMARY KEY (PerfDate, PerfTime),
+ FOREIGN KEY (Title) REFERENCES Production(Title)
+);
+
+CREATE TABLE Booking(
+ BookingId varchar(255) not null,
+ PerfDate date not null,
+ PerfTime time not null,
+ Name varchar(255) not null,
+ Email varchar(255) not null,
+ RowNumber char(6) not null,
+ PRIMARY KEY (BookingId),
+ FOREIGN KEY (PerfDate,PerfTime) REFERENCES Performance(PerfDate,PerfTime),
+ FOREIGN KEY (RowNumber) REFERENCES Seat(RowNumber)
+);
